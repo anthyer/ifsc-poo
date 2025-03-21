@@ -23,3 +23,7 @@ public class OlaMundo{
     }
 }
 ```
+
+## Mascote do Java
+
+![Imagem do mascote do Java, o Duke, jogando futebol com a camisa da seleção brasileira.](duke.png)
