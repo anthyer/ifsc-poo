@@ -13,3 +13,13 @@ Para deixar em **negrito** e em *itálico*.
 1. Primeiro item
 2. Segundo item
 3. Terceiro item
+
+## Código Java
+
+```java
+public class OlaMundo{
+    public static void main(String args[]){
+        System.out.println("Olá Mundo!");
+    }
+}
+```
