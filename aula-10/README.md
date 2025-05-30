@@ -76,7 +76,8 @@ classDiagram
         -pesoMaximo: double
         -maxCombustivel: double
         -motor: Motor[8]
-        +Aviao()        
+        +Aviao()       
+        +LigaDesliga() boolean
     }
     
     class Motor {
@@ -84,7 +85,44 @@ classDiagram
         -tipo: String
         -estado: boolean
         +Motor()
-        +LigaDesliga()
+        +LigaDesliga() boolean
     }
+```
+
+```mermaid
+classDiagram
+    direction LR
+    
+    Livro "0..*" o-- "1--*" Autor
+    Livro "1" o-- "1..*" Edicao
+    Edicao "0..*" o-- "1" Editora
+    
+    class Livro {
+    -idLivro: int
+    -titulo: String
+    -idioma: String
+    -autores: ArrayList<Autor>
+    -edicoes: ArrayList<Edicao>
+    }
+    
+    class Edicao {
+        -idEdicao: int
+        -ano: int
+        -paginas: int
+        -isbn: String
+        -editora: Editora
+    }
+    
+    class Editora {
+        -idEditora: int
+        -nome: String
+        -cidade: String
+    }
+    
+    class Autor {
+        -idAutor: int
+        -nome: String
+    }
+
 ```
 
