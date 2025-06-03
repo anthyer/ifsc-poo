@@ -123,6 +123,6 @@ classDiagram
         -idAutor: int
         -nome: String
     }
-
 ```
+
 
