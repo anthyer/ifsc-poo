@@ -4,7 +4,11 @@ import java.util.HashMap;
 
 public class ColecaoEmail {
     private HashMap<String,String> dados;
-    private final String ER = "^[\\w-\\+]+(\\.[\\w]+)∗@[\\w-]+(\\.[\\w]+)∗(\\.[a-z]{2,})$";
+    private final String ER = "^[\\w-\\+]+(\\.[\\w]+)*@[\\w-]+(\\.[\\w]+)*(\\.[a-z]{2,})$";
+
+    public ColecaoEmail() {
+        this.dados = new HashMap<>();
+    }
 
     public boolean add(String rotulo, String valor) {
         if (dados.get(rotulo) == null && valor.matches(ER)) {
@@ -23,6 +27,10 @@ public class ColecaoEmail {
     }
 
     public boolean update(String rotulo, String valor) {
+        if (dados.get(rotulo) != null && valor.matches(ER)) {
+            dados.put(rotulo, valor);
+            return true;
+        }
         return false;
     }
 
